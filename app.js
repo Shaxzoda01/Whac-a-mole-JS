@@ -15,6 +15,16 @@ function startGame() {
     updateScore();
     nextCircle();
 
+    document.addEventListener("mousemove", (e) => {
+        hammer.style.left = e.pageX + "px";
+        hammer.style.top = e.pageY + "px";
+    });
+    document.addEventListener("mousedown", () => {
+        hammer.style.transform = "translate(-50%, -50%) rotate(20deg)";
+    });
+    document.addEventListener("mouseup", () => {
+        hammer.style.transform = "translate(-50%, -50%) rotate(0deg)";
+    });
     setTimeout(() => {
         circles.forEach(circle => {
             circle.classList.remove('active');
@@ -22,17 +32,9 @@ function startGame() {
         });
         resultTable.insertAdjacentHTML('beforeend', `<tr><td>${userName}</td><td>${score}</td></tr>`);
     }, 20000);
+
 }
-document.addEventListener("mousemove", (e) => {
-    hammer.style.left = e.pageX + "px";
-    hammer.style.top = e.pageY + "px";
-});
-document.addEventListener("mousedown", () => {
-    hammer.style.transform = "translate(-50%, -50%) rotate(20deg)";
-});
-document.addEventListener("mouseup", () => {
-    hammer.style.transform = "translate(-50%, -50%) rotate(0deg)";
-});
+
 function nextCircle() {
     circles.forEach(circle => {
         circle.classList.remove('active');

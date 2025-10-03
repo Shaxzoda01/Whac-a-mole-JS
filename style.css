@@ -3,20 +3,11 @@
     padding: 0;
 }
 
-html {
-    height: 100%;
-}
-
 a {
     text-decoration: none;
 }
 
 body {
-    height: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     color: rgb(250, 183, 194);
     background-color: #AFE57F;
     text-align: center;
@@ -26,13 +17,10 @@ body {
 #hammer {
     position: absolute;
     width: 100px;
-    /* размер молотка */
     pointer-events: none;
-    /* чтобы молоток не мешал кликам */
     transform: translate(-50%, -50%) rotate(0deg);
     transition: transform 0.1s;
     display: none;
-    /* сначала скрыт */
 }
 
 button {
@@ -51,13 +39,11 @@ header h1 {
     font-size: 80px;
     font-weight: normal;
     color: #022D11;
-    margin: 0;
 }
 
 .title {
     font-family: "Jomhuria", serif;
     font-size: 120px;
-    line-height: auto;
     letter-spacing: 5px;
 }
 
@@ -89,7 +75,6 @@ header h1 {
 
 .score {
     font-family: "Jomhuria";
-    font-weight: normal;
     font-size: 100px;
     margin-bottom: 50px;
     color: #022D11;
@@ -109,6 +94,7 @@ header h1 {
     background-color: rgb(255, 161, 175);
 }
 
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 150px);
@@ -122,44 +108,63 @@ header h1 {
     height: 150px;
     border: none;
     background-color: transparent;
+    background-image: url('./Property 1=Variant2.svg');
+    background-size: 150px;
+    background-repeat: no-repeat;
     outline: none;
-    transition: all 0.1s ease;
+    transition: background-image 0.1s linear;
 }
 
 .circle.active {
-    animation: glow 0.6s infinite steps(1);
-
-}
-
-.circle {
-    background-image: url('./Property\ 1=Variant2.svg');
+    background-image: url("./Property 1=Default.svg");
     background-size: 150px;
     background-repeat: no-repeat;
 }
 
-/* 
-.circle.active {
-    background-color: green;
-} */
 
-@keyframes glow {
+.mole-hole {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.hole {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    padding-top: 120px;
+    z-index: -1;
+}
+
+.mole {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 170px;
+    z-index: 0;
+    animation: mole-move 2s infinite;
+}
+
+@keyframes mole-move {
     0% {
-        background-image: url('./Frame\ 86312.svg');
-        background-size: 150px;
+        transform: translateX(-50%) translateY(100%);
     }
 
-    100% {}
-}
+    40%,
+    60% {
+        transform: translateX(-50%) translateY(0);
+    }
 
-.glow-button.clicked {
-    animation: none;
-    background-color: pink;
-    box-shadow: none;
+    100% {
+        transform: translateX(-50%) translateY(100%);
+    }
 }
-
 
 #results {
-    width: auto;
     border-collapse: collapse;
     margin-top: 20px;
     font-family: Arial, sans-serif;
