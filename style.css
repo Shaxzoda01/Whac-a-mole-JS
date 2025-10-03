@@ -187,3 +187,66 @@ input {
     font-size: 20px;
     margin-bottom: 40px;
 }
+
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 73px;
+    }
+
+    .title {
+        font-size: 73px;
+    }
+
+    .mole-hole {
+        width: 200px;
+        height: 200px;
+        margin-top: 0;
+    }
+
+    .mole {
+        width: 100px;
+    }
+
+    .hole {
+        padding-top: 80px;
+    }
+
+    .main-link {
+        border-radius: 32px;
+        padding: 15px 70px;
+    }
+
+    header {
+        padding: 10px 16px;
+    }
+
+    header a,
+    header h1 {
+        font-size: 35px;
+    }
+
+    input {
+        margin-top: 20px;
+    }
+
+    .score {
+        font-size: 60px;
+        margin-top: 30px;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        background-size: 100px;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(3, 100px);
+        grid-gap: 13px;
+    }
+
+    .circle.active {
+        background-size: 100px;
+    }
+}

@@ -11,7 +11,7 @@ function startGame() {
     hammer.style.display = "block";
     document.body.style.cursor = "none";
 
-    userName = input.value;
+    // userName = input.value;
     score = 0;
     updateScore();
     nextCircle();
@@ -32,7 +32,7 @@ function startGame() {
             circle.classList.remove('active');
             circle.onclick = null;
         });
-        resultTable.insertAdjacentHTML('beforeend', `<tr><td>${userName}</td><td>${score}</td></tr>`);
+        resultTable.insertAdjacentHTML('beforeend', `<tr><td>${score}</td></tr>`); //<td>${userName}</td>
     }, 20000);
 
 }
