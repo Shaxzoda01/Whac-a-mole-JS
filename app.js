@@ -3,6 +3,7 @@ var scoreDisplay = document.getElementById('score');
 var input = document.getElementById('input')
 var resultTable = document.getElementById('results')
 var hammer = document.getElementById("hammer");
+var highScoreContainer = document.getElementById("highScore")
 
 var score = 0;
 
@@ -25,6 +26,7 @@ function startGame() {
     document.addEventListener("mouseup", () => {
         hammer.style.transform = "translate(-50%, -50%) rotate(0deg)";
     });
+
     setTimeout(() => {
         circles.forEach(circle => {
             circle.classList.remove('active');
