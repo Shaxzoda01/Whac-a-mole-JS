@@ -11,7 +11,7 @@ body {
     color: rgb(250, 183, 194);
     background-color: #AFE57F;
     text-align: center;
-    cursor: url('./9d07c71f-46a5-479f-8a44-62ddf1538028.png') 40 40, auto;
+    cursor: url('./imgs/mallet.png') 40 40, auto;
 }
 
 #hammer {
@@ -108,7 +108,7 @@ header h1 {
     height: 150px;
     border: none;
     background-color: transparent;
-    background-image: url('./Property 1=Variant2.svg');
+    background-image: url('./imgs/Property\ 1=Variant2.svg');
     background-size: 150px;
     background-repeat: no-repeat;
     outline: none;
@@ -116,7 +116,7 @@ header h1 {
 }
 
 .circle.active {
-    background-image: url("./Property 1=Default.svg");
+    background-image: url("./imgs/Property\ 1=Default.svg");
     background-size: 150px;
     background-repeat: no-repeat;
 }
